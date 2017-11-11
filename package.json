@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/aleksspeaker/minima.list/issues"
   },
-  "homepage": "https://github.com/aleksspeaker/minima.list#readme"
+  "homepage": "https://github.com/aleksspeaker/minima.list#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
