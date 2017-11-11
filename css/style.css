@@ -1,0 +1,282 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700");
+body {
+  font-family: "Lato", "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 72px 0 0 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.64);
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.input-field::-webkit-input-placeholder {
+  font-family: "Lato";
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+}
+.input-field::-moz-placeholder {
+  font-family: "Lato";
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+}
+.input-field:-ms-input-placeholder {
+  font-family: "Lato";
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+}
+.input-field::placeholder {
+  font-family: "Lato";
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+}
+
+.input-field:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+.input-field {
+  font-family: "Lato";
+  opacity: 0;
+  margin-top: 15%;
+  border: none;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+  width: 300px;
+  outline: none;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: fadein 0.3s 1s forwards;
+          animation: fadein 0.3s 1s forwards;
+}
+
+.hint {
+  margin-left: 332px;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  padding: 1px;
+  color: rgba(0, 0, 0, 0.24);
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.task-body {
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.task-text {
+  margin: 0 0 0 8px;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 8px 16px;
+  width: 300px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background: #fafaff;
+  margin: 2px 0;
+  -webkit-animation: appear 0.3s;
+          animation: appear 0.3s;
+}
+
+.item:hover {
+  border: 1px solid #eee;
+}
+.item:hover .rem-btn {
+  visibility: visible;
+}
+.item:hover .checkbox {
+  visibility: visible;
+}
+
+.checkbox {
+  visibility: hidden;
+  -webkit-appearance: none;
+  padding: 8px;
+  border: 1px solid #aaa;
+  margin: 0px 8px 0 0;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  visibility: visible;
+}
+
+.checkbox:checked:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 3px;
+  content: "✔";
+  color: #666;
+}
+
+.rem-btn {
+  visibility: hidden;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.rem-btn:hover {
+  color: #F44336;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    margin-top: -100px;
+    margin-bottom: 100px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    margin-top: -100px;
+    margin-bottom: 100px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+}
+.done {
+  color: rgba(0, 0, 0, 0.34);
+  background: none;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.done .task-body {
+  text-decoration: line-through;
+}
+.done .task-body .task-text, .done .task-body .task-number {
+  text-decoration: line-through;
+}
+.done .rem-btn {
+  text-decoration: none;
+  visibility: visible;
+}
+
+.todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 32px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.reset {
+  color: rgba(0, 0, 0, 0.54);
+  font-family: "Lato";
+  display: none;
+  margin: 32px 0 0 0;
+  font-size: 14px;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 8px 16px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.reset:hover {
+  cursor: pointer;
+  border: 1px solid #F44336;
+  color: #F44336;
+}
+
+.reset:active {
+  border: 1px solid #fff;
+  background: #F44336;
+  color: #fff;
+  -webkit-transition: 0s;
+  transition: 0s;
+  box-shadow: 0 0 0 4px #eee;
+}
