@@ -1,14 +1,3 @@
-var tasklist = [
-  {
-    text: "Throw the garbage",
-    done: "true"
-  },
-  {
-    text: "Brush my teeth",
-    done: "false"
-  }
-];
-
 function Task(text) {
   this.text = text;
   this.done = false;
