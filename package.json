@@ -2,27 +2,38 @@
   "name": "minimalist",
   "version": "1.0.0",
   "description": "Minimalistic todo list",
-  "main": "app.js",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp default"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aleksspeaker/minima.list.git"
-  },
+
+  "repository": "git+https://github.com/aleksspeaker/minima.list.git",
   "keywords": [
     "simple",
     "minimal",
     "todo",
     "list"
   ],
+
   "author": "Alex Glinskiy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/aleksspeaker/minima.list/issues"
   },
+
   "homepage": "https://github.com/aleksspeaker/minima.list#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
-  }
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^2.2.0"
+  },
+
+  "dependencies": {}
+  
 }
